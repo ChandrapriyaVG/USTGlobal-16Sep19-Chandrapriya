@@ -1,0 +1,35 @@
+
+<div class="col-md-4 offset-4 mt-4 mb-4 card card-body">
+    <form action="" [formGroup]="form" (ngSubmit)="loginData(form)">
+        <h1 class="text-center text-white bg-warning">ADD MOVIE</h1>
+        
+        <div class="form-group">
+                <input type="text" name="title" id="title" class="form-control" placeholder="Movie Title" formControlName="title">
+                <div *ngIf="title.touched && title.invalid">
+                    <p *ngIf="title.errors.required">This field is required</p>
+                    <p *ngIf="title.errors.unique" class="text-danger">Movie already exists</p>    
+                </div>
+
+        </div>
+        <div class="form-group">
+           
+            <input type="url" name="imgurl" id="imgurl" class="form-control" placeholder="Movie image URL" formControlName="imgurl">
+            <div *ngIf="imgurl.touched && imgurl.invalid">
+                <p *ngIf="imgurl.errors.required">This field is required</p>
+            
+            </div>
+        </div>
+            <div class="form-group">
+                <input type="text" name="desc" id="desc" class="form-control" placeholder="Movie Description" formControlName="desc">
+                <div *ngIf="desc.touched && desc.invalid">
+                    <p *ngIf="desc.errors.required">This field is required</p>
+                     
+                </div>
+
+    </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-success float right" [disabled]="form.invalid">ADD MOVIE</button>
+        </div>
+    </form>
+</div>
+

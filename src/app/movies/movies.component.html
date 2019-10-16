@@ -1,0 +1,15 @@
+<div>
+    <div class="class col-md-4 offset-md-4 mt-3">
+        <div class="input-group">
+
+        </div>
+        <input class="form-control ng-pristine ng-valid ng-touched" type="search" placeholder="Searc by movie name" [(mgModel)]='movieName'(keyup)="searchMovies(movieName)">
+    </div>
+</div>
+<div class="col-md-2 float-left ml-5 mr-5 mt-5 card card-body" *ngFor="let movie of movies">
+    <img src="{{movie.Poster}}" >
+    <h4 class="text-center">{{movie.Title}}</h4>
+    <h4 class="text-center">{{movie.Year}}</h4>
+    <h4 class="text-center">{{movie.imdbID}}</h4>
+
+</div>
