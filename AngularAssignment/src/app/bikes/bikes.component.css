@@ -1,0 +1,5 @@
+.col-md-4.mt-4.float-left.card.card-body{
+    overflow: scroll;
+    height: 600px;
+    width: 500px;
+}
