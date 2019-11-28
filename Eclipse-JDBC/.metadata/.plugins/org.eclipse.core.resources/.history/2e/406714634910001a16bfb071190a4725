@@ -1,0 +1,10 @@
+package com.ustglobal.springcore.di;
+
+public class Book {
+
+	String author;
+	String name;
+	double price;
+	
+	
+}

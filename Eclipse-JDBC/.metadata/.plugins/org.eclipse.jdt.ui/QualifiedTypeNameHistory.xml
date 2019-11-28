@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.config.BeanPostProcessor"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.config.BeanFactoryPostProcessor"/>
+<fullyQualifiedTypeName name="com.ustglobal.springcore.config.ConfigurationClass"/>
+<fullyQualifiedTypeName name="com.ustglobal.springcore.di.Hello"/>
+<fullyQualifiedTypeName name="com.ustglobal.springcore.di.Dog"/>
+<fullyQualifiedTypeName name="com.ustglobal.springcore.di.Animal"/>
+<fullyQualifiedTypeName name="com.ustglobal.springcore.di.Pet"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="com.ustglobal.springcore.di.Cat"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
+<fullyQualifiedTypeName name="java.lang.StrictMath"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Scope"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
+<fullyQualifiedTypeName name="com.ustglobal.springcore.di.Book"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+<fullyQualifiedTypeName name="com.ustglobal.springcore.config.BookConfiguration"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+<fullyQualifiedTypeName name="com.ustglobal.springcore.di.Author"/>
+<fullyQualifiedTypeName name="javax.annotation.PreDestroy"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,25 @@
+package com.ustglobal.springcore.di;
+
+import javax.annotation.PreDestroy;
+
+public class Hello {
+
+	private String msg;
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
+	@PreDestroy
+	public void init() {
+		System.out.println("init method executing from Hello");
+	}
+	
+	public void destroy() {
+		System.out.println("Destroy method executing from Hello");
+	}
+	
+}

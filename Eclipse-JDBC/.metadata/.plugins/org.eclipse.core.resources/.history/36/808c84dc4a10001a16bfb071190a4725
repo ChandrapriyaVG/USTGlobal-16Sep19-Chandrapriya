@@ -1,0 +1,16 @@
+package com.ustglobal.springcore.config;
+
+import org.springframework.context.annotation.Bean;
+
+import com.ustglobal.springcore.di.Book;
+
+public class BookConfiguration {
+
+	@Bean(name="")
+	public Book getBook() {
+		Book book = new Book();
+		book.setAuthor("Mishkhat");
+		book.setName("Mishuu");
+		return book;
+	}
+}
