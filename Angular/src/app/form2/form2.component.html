@@ -1,0 +1,53 @@
+<p>form2 works!</p>
+
+
+
+<form action="" class="col-md-4 offset-4 mt-5 mb-5 card card-body" #form="ngForm" (ngSubmit)="loginData(form)">
+    <h1 class="text-center bg-dark text-white">Form2</h1>
+    <div class="form-group">
+        <input type="text" name="candidatename" id="candidatename" class="form-control" placeholder="Candidate Name" #candidatename="ngModel" ngModel required>
+        <div *ngIf="candidatename.touched &&  candidatename.invalid">
+            <p class="alert alert-danger" *ngIf="candidatename.errors.required">This field is mandatory!</p>
+        </div>
+    </div>
+    <div class="form-group">
+            <input type="number" name="yop" id="yop" class="form-control" placeholder="yop" #yop="ngModel" ngModel required>
+            <div *ngIf="yop.touched && yop.invalid">
+                <p class="alert alert-danger" *ngIf="yop.errors.required">This field is mandatory!</p>
+            </div>
+        </div>
+        Skills
+<span>
+    <input type="radio" name="skills" id="skills">Java
+    <input type="radio" name="skill" id="skill">Angular
+    <input type="radio" name="skil" id="skil">SQL
+    <input type="radio" name="sklls" id="sklls">Springs
+</span><br>
+    
+        
+      
+    
+
+    <div class="form-group">
+        <input type="text" name="cctc" id="cctc" class="form-control" placeholder="CCTC" #cctc="ngModel" ngModel required>
+        <div *ngIf="cctc.touched && cctc.invalid">
+            <p class="alert alert-danger" *ngIf="cctc.errors.required">This field is mandatory!</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="text" name="ectc" id="ectc" class="form-control" placeholder="ECTC" #ectc="ngModel" ngModel required>
+        <div *ngIf="ectc.touched && ectc.invalid">
+            <p class="alert alert-danger" *ngIf="ectc.errors.required">This field is mandatory!</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="text" name="location" id="location" class="form-control" placeholder="Ready to relocate" #location="ngModel" ngModel required>
+        <div *ngIf="location.touched && location.invalid">
+            <p class="alert alert-danger" *ngIf="mctc.errors.required">This field is mandatory!</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid">Schedule Interview</button>
+    </div>
+
+</form>
