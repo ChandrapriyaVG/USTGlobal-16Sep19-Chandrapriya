@@ -1,0 +1,25 @@
+form
+{
+background: 700px;
+
+background-image: url(/css/image/milky-way-4484593__340.jpg);lign: center;
+padding:10px;
+font-size: 20px;
+font-style: italic;
+} 
+
+img{
+    width: 250px;
+    height: 350px;
+    border: 1px solid palevioletred;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 15px lightpink;
+    transition: all 1s;
+}
+img:hover{
+    transform: scale(1.2,1.2);
+
+}
