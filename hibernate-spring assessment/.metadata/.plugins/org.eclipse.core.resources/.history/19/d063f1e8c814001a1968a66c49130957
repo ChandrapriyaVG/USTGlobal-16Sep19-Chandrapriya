@@ -1,0 +1,19 @@
+package retailermvc.beans;
+
+public class Product {
+
+	private String productName;
+	private int pricePerUnit;
+	public String getProductName() {
+		return productName;
+	}
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+	public int getPricePerUnit() {
+		return pricePerUnit;
+	}
+	public void setPricePerUnit(int pricePerUnit) {
+		this.pricePerUnit = pricePerUnit;
+	}
+}

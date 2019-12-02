@@ -1,0 +1,53 @@
+package com.ustglobal.retailermvc.dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.PersistenceUnit;
+import javax.persistence.TypedQuery;
+
+import org.springframework.stereotype.Repository;
+
+import com.ustglobal.retailermvc.beans.Product;
+import com.ustglobal.retailermvc.beans.Retailer;
+
+@Repository
+public class RetailerDAOImpl implements RetailerDAO {
+
+	@PersistenceUnit
+	private EntityManagerFactory factory;
+
+	@Override
+	public Retailer login(int id, String password) {
+		String jpql = "from Retailer where id=:id and password=:password";
+		EntityManager manager = factory.createEntityManager();
+		TypedQuery<Retailer> query = manager.createQuery(jpql,Retailer.class);
+		query.setParameter("id", id);
+		query.setParameter("password", password);
+		try {
+		Retailer bean = query.getSingleResult();
+		return bean;
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	@Override
+	public int register(Retailer bean) {
+		return 0;
+	}
+
+	@Override
+	public Product searchProductById(int orderId) {
+		return null;
+	}
+
+	@Override
+	public boolean updatePassword(int id, String password) {
+		return false;
+	}
+	
+	
+
+}
