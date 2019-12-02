@@ -1,0 +1,5 @@
+package com.ustglobal.retailermvc.dao;
+
+public interface RetailerDAO {
+
+}

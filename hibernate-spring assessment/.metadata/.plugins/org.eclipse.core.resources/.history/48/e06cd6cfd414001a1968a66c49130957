@@ -1,0 +1,29 @@
+package com.ustglobal.retailermvc.dao;
+
+import com.ustglobal.retailermvc.beans.Product;
+import com.ustglobal.retailermvc.beans.Retailer;
+
+public class RetailerDAOImpl implements RetailerDAO {
+
+	@Override
+	public Retailer login(int id, String password) {
+		return null;
+	}
+
+	@Override
+	public int register(Retailer bean) {
+		return 0;
+	}
+
+	
+	@Override
+	public boolean updatePassword(int id, String password) {
+		return false;
+	}
+
+	@Override
+	public Product searchProductById(int orderId) {
+		return null;
+	}
+
+}

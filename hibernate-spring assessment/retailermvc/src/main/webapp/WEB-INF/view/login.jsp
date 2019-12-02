@@ -5,29 +5,18 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Login</title>
 </head>
 <body>
-<h3>${msg }</h3>
-<fieldset>
-	<legend>Login</legend>
-	<form action="./login" method="post">
-		<table>
-			<tr>
-				<td>ID:</td>
-				<td><input type = "number" name="id"></td>
-			</tr>
-			<tr>
-				<td>Password:</td>
-				<td><input type="password" name="password"></td>
-			</tr>
-			<tr>
-				<td><input type="reset" value="Reset"></td>
-				<td><input type="submit" value="Submit"></td>
-			</tr>
-		</table>
-	</form>
-</fieldset>
-<a href="./register">Click here to Register!</a>
+<form action="./login" method="post" style="margin-left: 450px;margin-top: 100px;">
+<h2>${msg}</h2>
+<h3>Login Here</h3>
+Email:<br>
+<input type="text" placeholder="enter email" name="email" required="required"><br>
+Password:<br>
+<input type="text" name="password" placeholder="enter Password" required="required"><br>
+<button type="submit">Login</button><button type="reset">Reset</button><br>
+<a href="./register">Register Here</a>
+</form>
 </body>
 </html>

@@ -1,0 +1,5 @@
+package com.ustglobal.retailermvc.controller;
+
+public class RetailerController {
+
+}
