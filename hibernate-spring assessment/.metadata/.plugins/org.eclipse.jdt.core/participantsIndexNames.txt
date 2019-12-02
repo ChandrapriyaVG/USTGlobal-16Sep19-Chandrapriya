@@ -1,5 +1,0 @@
-INDEX VERSION 1.131
-E:\hibernate-spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1928751481.index
-\retailermvc\src\main\java
-E:\hibernate-spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\289762293.index
-\retailermvc\src\main\resources

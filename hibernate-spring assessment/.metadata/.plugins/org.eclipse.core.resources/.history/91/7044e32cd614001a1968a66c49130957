@@ -1,5 +1,0 @@
-package com.ustglobal.retailermvc.repo;
-
-public interface RetailerRepo {
-
-}
