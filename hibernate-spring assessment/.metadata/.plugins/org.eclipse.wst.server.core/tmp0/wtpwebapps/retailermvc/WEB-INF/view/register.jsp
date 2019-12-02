@@ -13,23 +13,23 @@
 		<table>
 			<tr>
 				<td>Name:</td>
-				<td><input type="text" name="name"></td>
+				<td><input type = "text" name="name"></td>
 			</tr>
 			<tr>
 				<td>Email:</td>
-				<td><input type="email" name="email"></td>
+				<td><input type = "email" name="email"></td>
 			</tr>
 			<tr>
 				<td>Password:</td>
-				<td><input type="password" name="password"></td>
+				<td><input type = "password" name="password"></td>
 			</tr>
 			<tr>
-			<td><input type="reset" value="Reset"></td>
-			<td><input type="submit" value="Register"></td>
+				<td><input type="reset" value="Reset">  
+				<td><input type="submit" value="Register">  
 			</tr>
 		</table>
 	</form>
 </fieldset>
-<a href="./login">Click here to Register</a>
+<a href="./login">Login HERE!</a>
 </body>
 </html>
