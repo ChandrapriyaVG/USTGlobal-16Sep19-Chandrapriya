@@ -1,0 +1,5 @@
+package com.ustglobal.empspringmvc.config;
+
+public class OrmConfig {
+
+}

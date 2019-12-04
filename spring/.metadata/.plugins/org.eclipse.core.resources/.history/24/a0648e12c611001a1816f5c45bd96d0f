@@ -1,0 +1,59 @@
+package com.ustglobal.springmvc.controller;
+
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
+import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.ustglobal.springmvc.beans.Employee;
+
+@Controller
+public class HelloController {
+	
+	public void initBinder(WebDataBinder binder) {
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+		CustomDateEditor editor = new CustomDateEditor(format, true);
+		binder.registerCustomEditor(Date.class, editor);
+	}
+
+	@RequestMapping(path="/hello")
+	public String hello(@RequestParam("name") String name, @RequestParam("id") int id,  ModelMap map) {			//Query string
+		map.addAttribute("msg","Hello World");
+		map.addAttribute("name", name);
+		map.addAttribute("id", id);
+		return "index";				//logical view name
+	}
+	
+	@RequestMapping(path="/hi/{name}/{id}")								//path param
+	public String hi(@PathVariable("name") String name , 
+			@PathVariable("id") int id, ModelMap map) {
+		map.addAttribute("msg","Hello Moto");
+		map.addAttribute("name",name);
+		map.addAttribute("id", id);
+		return "index";				//logical view name
+	}
+	
+	@RequestMapping(path="/form")
+	public String formPage() {
+		return "form";
+	}
+	
+	@RequestMapping(path="/form", method = RequestMethod.POST)
+	public String form(Employee employee,
+			ModelMap map) {
+	map.addAttribute("id",employee.getId() );
+	map.addAttribute("name",employee.getName());
+	map.addAttribute("password",employee.getPassword());
+	map.addAttribute("gender",employee.getGender());
+	map.addAttribute("doj",employee.getDoj());
+		
+	return "formoutput";
+	}
+}

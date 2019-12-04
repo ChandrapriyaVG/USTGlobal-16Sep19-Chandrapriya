@@ -1,0 +1,5 @@
+package com.ustglobal.springboot.dao;
+
+public interface EmployeeDAO {
+
+}

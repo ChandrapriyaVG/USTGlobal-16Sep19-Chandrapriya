@@ -1,0 +1,17 @@
+package com.ustglobal.springboot.repo;
+
+import javax.transaction.Transactional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+
+import com.ustglobal.springboot.dto.EmployeeBean;
+
+@Transactional			//other than select query
+public interface EmployeeRepo extends JpaRepository<EmployeeBean,Integer> {
+
+	@Modifying			//beacause it is update
+	@Query("update EmployeeBean set name=:name, password=:password,doj=:doj,gender=:gender")
+	public void update(EmployeeBean bean);
+}

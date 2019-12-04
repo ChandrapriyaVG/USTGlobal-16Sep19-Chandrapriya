@@ -1,0 +1,5 @@
+package com.ustglobal.empspringmvc.dao;
+
+public class EmployeeDAOImpl {
+
+}

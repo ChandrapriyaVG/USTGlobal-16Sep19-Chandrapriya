@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.ustglobal.springcore.config.ConfigurationClass&apos; to &apos;HelloConfigurationClass&apos;&#x0D;&#x0A;- Original project: &apos;springcore&apos;&#x0D;&#x0A;- Original element: &apos;com.ustglobal.springcore.config.ConfigurationClass&apos;&#x0D;&#x0A;- Renamed element: &apos;com.ustglobal.springcore.config.HelloConfigurationClass&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ConfigurationClass&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.ustglobal.springcore.config{ConfigurationClass.java[ConfigurationClass" matchStrategy="1" name="HelloConfigurationClass" qualified="false" references="true" similarDeclarations="false" stamp="1574829852416" textual="false" version="1.0"/>
+</session>

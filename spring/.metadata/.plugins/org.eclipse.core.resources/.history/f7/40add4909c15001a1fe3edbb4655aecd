@@ -1,0 +1,13 @@
+package com.ustglobal.springrest.config;
+
+import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
+
+
+public class OrmConfig {
+
+	public LocalEntityManagerFactoryBean getBean() {
+		LocalEntityManagerFactoryBean bean = new LocalEntityManagerFactoryBean();
+		bean.setPersistenceUnitName("employee-unit");
+		return bean;
+	}
+}

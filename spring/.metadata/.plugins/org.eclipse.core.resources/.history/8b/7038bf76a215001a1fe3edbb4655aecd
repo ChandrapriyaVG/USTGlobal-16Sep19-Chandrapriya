@@ -1,0 +1,5 @@
+package com.ustglobal.springrest.service;
+
+public class EmployeeServiceImpl {
+
+}

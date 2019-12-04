@@ -1,0 +1,5 @@
+package com.ustglobal.springboot.config;
+
+public class OrmConfig {
+
+}
