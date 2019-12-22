@@ -1,0 +1,85 @@
+<div class="col-md-4 offset-md-4 mt-5">
+    <div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+
+    <form #loginForm='ngForm' (ngSubmit)='login(loginForm.value)' class="container" method="POST" role="form">
+        <div>
+            <h2>Login</h2>
+        </div>
+        <div class="form-group">
+            <input type="text" name="id" id="id" placeholder="Enter ID" #id='ngModel' ngModel required class="form-control mb-3" pattern="[0-9*]">
+            <div *ngIf="id.touched && id.invalid">
+                <p class="alert alert-danger" *ngIf="id.errors.required">This field is mandatory!</p>
+            </div>
+            <!-- <div *ngIf="id.errors && (id.touched || id.dirty)">
+              <p class="alert alert-danger" [hidden]="!id.errors?.pattern">This field is mandatory!</p>
+            </div>   -->
+          </div>
+
+          <div clas="form-group">
+            <br> 
+            <input type="password" name="password" id="password" placeholder="Enter Password" #password='ngModel'
+                ngModel required class="form-control mb-3">
+            <div *ngIf="password.touched && password.invalid">
+                <p class="alert alert-danger" *ngIf="password.errors.required">This field is mandatory!</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success float-right" [disabled]="loginForm.invalid">Login</button>
+        </div>
+    </form>
+</div>
+
+<!-- <div class="container" >
+    <div class="card" style="width: 600px; margin: auto;">
+      <div class="card-header bg-dark text-white">
+        <h4 class="text-uppercase text-center">Login</h4>
+      </div>
+      <div class="card-body">
+        <div class="row">
+  
+          <div class="col-sm-6 col-md-6 col-xs-12">
+            <form action="" #loginForm="ngForm" (ngSubmit)="login(loginForm.value)" method="POST" role="form">
+  
+              <div class="form-group mt-2">
+                <label for="id">User ID</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fa fa-user"></i>
+                    </span>
+                  </div>
+                  <input type="number" name="id" required placeholder="Enter Your ID" class="form-control" #id="ngModel"
+                    ngModel>
+                  <div *ngIf="id.invalid && id.touched">
+                    <p *ngIf="id.errors.required" class="text-danger">*This field is mandatory
+                      <p *ngIf="id.errors.minlength" class="text-danger">*This field accepts minimum
+                        3 characters
+                  </div>
+                </div>
+              </div>
+  
+              <div class="form-group mt-2">
+                <label for="password">Password</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                  </div>
+                  <input type="password" name="password" required minlength="8" placeholder="Enter Password"
+                    class="form-control" #password="ngModel" ngModel>
+                  <div *ngIf="password.invalid && password.touched">
+                    <p *ngIf="password.errors.required" class="text-danger">*This field is mandatory
+                      <p *ngIf="password.errors.minlength" class="text-danger">*This field accepts minimum
+                        8 characters
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <button type="submit" [disabled]="loginForm.invalid"
+                  class="btn btn-success rounded-0 float-right">Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+ -->

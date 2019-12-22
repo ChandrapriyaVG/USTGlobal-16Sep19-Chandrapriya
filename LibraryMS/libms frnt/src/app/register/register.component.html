@@ -1,0 +1,49 @@
+<div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+<div class="bg-img">
+    <div class="col-md-4 offset-md-4 mt-5">
+        <div class="card-body" class="container">
+            <form #registerForm='ngForm' (ngSubmit)='register(registerForm)'>
+                <div>
+                    <h2>Student Registeration</h2>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="name" id="name" placeholder="Enter Name" #name='ngModel' ngModel required
+                        class="form-control mb-3">
+                    <div *ngIf="name.touched && name.invalid">
+                        <p class="alert alert-danger" *ngIf="name.errors.required">This field is mandatory!</p>
+                    </div>
+
+                    <input type="email" name="email" id="email" placeholder="Enter Email" #email='ngModel' ngModel
+                        required class="form-control mb-3">
+                    <div *ngIf="email.touched && email.invalid">
+                        <p class="alert alert-danger" *ngIf="email.errors.required">This field is mandatory!</p>
+                    </div>
+
+                    <input type="password" name="password" id="password"
+                        placeholder="Enter Password(8-13 characters only)" #password='ngModel' ngModel required
+                        minlength="8" maxlength="13" class="form-control mb-3">
+                        
+                    <div *ngIf="password.touched && password.invalid">
+                        <p class="alert alert-danger" *ngIf="password.errors.required">This field is mandatory!</p>
+                        <p *ngIf="password.errors.minlength" class="text-danger">*This field accepts
+                            8-13 characters only</p>
+                        <p *ngIf="password.errors.pattern" class="text-danger">*Password must contain uppercase,
+                            lowercase, numbers and spl character</p>
+                    </div>
+
+                    <!-- <input type="text" name="type" id="type" placeholder="Enter User Type" #type='ngModel' ngModel
+                        required class="form-control mb-3">
+                    <div *ngIf="type.touched && type.invalid">
+                        <p class="alert alert-danger" *ngIf="type.errors.required">This field is mandatory!</p>
+                    </div> -->
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success float-right"
+                        [disabled]="registerForm.invalid">Register</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</div>
